@@ -37,7 +37,7 @@ func main() {
 	flag.StringVar(&airport, "airport", "TPE", "airport to query")
 	flag.Parse()
 
-	doc, err := goquery.NewDocument(fmt.Sprintf("https://booking.evaair.com/flyeva/EVA/B2C/flight-status-erc.aspx?lang=zh-tw&cmstitle=erc-note9&date=%s-%s&airport=%sOrderby=&reqtime=&ACTCODE=&REASON=", start, end, airport))
+	doc, err := goquery.NewDocument(fmt.Sprintf("https://booking.evaair.com/flyeva/EVA/B2C/flight-status-erc.aspx?lang=zh-tw&cmstitle=erc-note9&date=%s-%s&airport=%s&Orderby=&reqtime=&ACTCODE=&REASON=", start, end, airport))
 	if err != nil {
 		log.Fatal(err)
 	}
